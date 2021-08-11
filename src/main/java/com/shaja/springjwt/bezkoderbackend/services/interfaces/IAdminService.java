@@ -7,7 +7,7 @@ import java.util.Optional;
 public interface IAdminService {
     User createUser(User user);
 
-    Optional<User> findByUsernameOREmail(String userNameorEmail);
+    Optional<User> findByUsernameOrEmail(String usernameOrEmail);
 
 //    TODO: DELETE USER
 //    TODO: BLOCK USER

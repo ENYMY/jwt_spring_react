@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/api/auth/")
 public class LoginController {
 
-    @RequestMapping(method = RequestMethod.POST,value = "/signup")
-    @RequestMapping(method = RequestMethod.POST,value = "/signin")
+//    @RequestMapping(method = RequestMethod.POST,value = "/signup")
+//    @RequestMapping(method = RequestMethod.POST,value = "/signin")
 
 }

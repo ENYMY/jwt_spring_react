@@ -21,7 +21,7 @@ public class AdminServiceImpl implements IAdminService, UserDetailsService {
     }
 
     @Override
-    public Optional<User> findByUsernameOREmail(String userNameorEmail) {
+    public Optional<User> findByUsernameOrEmail(String userNameorEmail) {
         Optional<User> user = userRepo.findByUsername(userNameorEmail);
         if(user.isEmpty()) {
             user = userRepo.findByEmail(userNameorEmail);
@@ -31,7 +31,7 @@ public class AdminServiceImpl implements IAdminService, UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Optional<User> optional = findByUsernameOREmail(username);
+        Optional<User> optional = findByUsernameOrEmail(username);
         if(optional.isEmpty()) {
             throw new UsernameNotFoundException("User with username or email" + username + "not Found");
         }
